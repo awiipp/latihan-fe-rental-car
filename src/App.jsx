@@ -13,6 +13,8 @@ import Penalties from './pages/penalties/Penalties'
 import Return from './pages/return/Return'
 import CreateRegister from './pages/register/CreateRegister'
 import UpdateRegister from './pages/register/UpdateRegister'
+import CreateRent from './pages/rent/CreateRent'
+import UpdateRent from './pages/rent/UpdateRent'
 
 function App() {
   return (
@@ -31,7 +33,11 @@ function App() {
               <Route path='/register/edit/:id' element={<UpdateRegister/>}/>
 
               <Route path='/car' element={<Car/>}/>
+
               <Route path='/rent' element={<Rent/>}/>
+              <Route path='/rent/create' element={<CreateRent/>}/>
+              <Route path='/rent/edit/:id' element={<UpdateRent/>}/>
+
               <Route path='/penalties' element={<Penalties/>}/>
               <Route path='/return' element={<Return/>}/>
             </Route>

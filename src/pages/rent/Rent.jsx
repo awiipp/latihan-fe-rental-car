@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Button, Table } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const Rent = () => {
     const [rents, setRents] = useState([])
@@ -35,6 +36,14 @@ const Rent = () => {
     <div>
       <h1>Rent</h1>
 
+      <div className="d-flex justify-content-md">
+              <Link to={'/rent/create'} variant='primary'>
+                <Button>
+                    Add
+                 </Button>
+              </Link>
+      </div>
+
       <Table>
         <thead>
             <tr>
@@ -58,8 +67,9 @@ const Rent = () => {
                 <td>{rent.down_payment}</td>
                 <td>{rent.discount}</td>
                 <td>{rent.total}</td>
-                <td>
+                <td className='d-flex flex-row gap-2'>
                     <Button variant='danger' onClick={() => handleDelete(rent.id)}>delete</Button>
+                    <Button variant='warning' as={Link} to={`/rent/edit/${rent.id}`}>Edit</Button>
                 </td>
             </tr>
             ))}
