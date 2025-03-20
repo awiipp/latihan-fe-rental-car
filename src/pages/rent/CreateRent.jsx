@@ -56,15 +56,15 @@ const CreateRent = () => {
         <Form onSubmit={handleSubmit}>
           <Form.Group>
               <Form.Label>id_tenant</Form.Label>
-              <Form.Select>
+              <Form.Select name='id_tenant'>
                 {registers.map((tenant) => (
-                    <option value={tenant.id}>{tenant.name}</option>
+                    <option value={tenant.id} >{tenant.name}</option>
                 ))}
               </Form.Select>
           </Form.Group>
           <Form.Group>
-          <Form.Label>id_tenant</Form.Label>
-            <Form.Select>
+          <Form.Label>id_car</Form.Label>
+            <Form.Select name='id_car'>
                     {cars.map((car) => (
                         <option value={car.id}>{car.name_car}</option>
                     ))}

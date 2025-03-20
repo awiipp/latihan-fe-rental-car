@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Button, Table } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const Return = () => {
     const [carReturns, setCarReturns] = useState([])
@@ -35,6 +36,14 @@ const Return = () => {
     <div>
       <h1>Returns</h1>
 
+      <div className="d-flex justify-content-md">
+              <Link to={'/return/create'} variant='primary'>
+                <Button>
+                    Add
+                 </Button>
+              </Link>
+      </div>
+
       <Table>
         <thead>
             <tr>
@@ -60,8 +69,9 @@ const Return = () => {
                 <td>{carReturn.penalties_total}</td>
                 <td>{carReturn.discount}</td>
                 <td>{carReturn.total}</td>
-                <td>
+                <td className='d-flex flex-row gap-2'>
                     <Button variant='danger' onClick={() => handleDelete(carReturn.id)}>delete</Button>
+                    <Button variant='warning' as={Link} to={`/return/edit/${carReturn.id}`}>Edit</Button>
                 </td>
             </tr>
             ))}

@@ -37,11 +37,11 @@ const Register = () => {
       <h1>Register</h1>
 
       <div className="d-flex justify-content-md">
-              <Link to={'/register/create'} variant='primary'>
-                <Button>
-                    Add
-                </Button>
-              </Link>
+        <Link to={'/register/create'} variant='primary'>
+          <Button>
+              Add
+          </Button>
+        </Link>
       </div>
 
       <Table>

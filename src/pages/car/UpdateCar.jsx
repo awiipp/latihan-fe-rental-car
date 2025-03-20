@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { Button, Form } from 'react-bootstrap'
 import { useNavigate, useParams } from 'react-router-dom'
 
 const UpdateCar = () => {
@@ -58,19 +59,27 @@ const UpdateCar = () => {
           </Form.Group>
           <Form.Group>
               <Form.Label>year</Form.Label>
-              <Form.Control type='number' name='year'value={data.year} onChange={(e) => setData({...data, year: e.target.value})}/>
+              <Form.Control type='number' name='year' value={data.year} onChange={(e) => setData({...data, year: e.target.value})}/>
           </Form.Group>
           <Form.Group>
               <Form.Label>seat</Form.Label>
               <Form.Control type='number' name='seat' value={data.seat} onChange={(e) => setData({...data, seat: e.target.value})}/>
           </Form.Group>
           <Form.Group>
-              <Form.Label>phone</Form.Label>
-              <Form.Control type='number' name='phone' value={data.phone} onChange={(e) => setData({...data, phone: e.target.value})}/>
+            <Form.Label>image</Form.Label>
+            <Form.Control type='file' accept='image/*' name='image' onChange={(e) => setData({...data, image: e.target.files})} />
           </Form.Group>
           <Form.Group>
-              <Form.Label>description</Form.Label>
-              <Form.Control as='textarea' name='description'value={data.description} onChange={(e) => setData({...data, description: e.target.value})}/>
+              <Form.Label>total</Form.Label>
+              <Form.Control type='number' name='total' value={data.total} onChange={(e) => setData({...data, total: e.target.value})}/>
+          </Form.Group>
+          <Form.Group>
+              <Form.Label>price</Form.Label>
+              <Form.Control type='number' name='price' value={data.price} onChange={(e) => setData({...data, price: e.target.value})}/>
+          </Form.Group>
+          <Form.Group>
+              <Form.Label>status</Form.Label>
+              <Form.Control type='text' name='status'value={data.status} onChange={(e) => setData({...data, status: e.target.value})}/>
           </Form.Group>
   
           <Button type='submit' className='mt-3'>Submit</Button>

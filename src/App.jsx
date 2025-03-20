@@ -15,6 +15,12 @@ import CreateRegister from './pages/register/CreateRegister'
 import UpdateRegister from './pages/register/UpdateRegister'
 import CreateRent from './pages/rent/CreateRent'
 import UpdateRent from './pages/rent/UpdateRent'
+import CreatePenalties from './pages/penalties/CreatePenalties'
+import UpdatePenalties from './pages/penalties/UpdatePenalties'
+import CreateReturn from './pages/return/CreateReturn'
+import UpdateReturn from './pages/return/UpdateReturn'
+import UpdateCar from './pages/car/UpdateCar'
+import CreateCar from './pages/car/CreateCar'
 
 function App() {
   return (
@@ -33,13 +39,20 @@ function App() {
               <Route path='/register/edit/:id' element={<UpdateRegister/>}/>
 
               <Route path='/car' element={<Car/>}/>
+              <Route path='/car/create' element={<CreateCar/>}/>
+              <Route path='/car/edit/:id' element={<UpdateCar/>}/>
 
               <Route path='/rent' element={<Rent/>}/>
               <Route path='/rent/create' element={<CreateRent/>}/>
               <Route path='/rent/edit/:id' element={<UpdateRent/>}/>
 
               <Route path='/penalties' element={<Penalties/>}/>
+              <Route path='/penalties/create' element={<CreatePenalties/>}/>
+              <Route path='/penalties/edit/:id' element={<UpdatePenalties/>}/>
+
               <Route path='/return' element={<Return/>}/>
+              <Route path='/return/create' element={<CreateReturn/>}/>
+              <Route path='/return/edit/:id' element={<UpdateReturn/>}  />
             </Route>
           </Routes>
 
