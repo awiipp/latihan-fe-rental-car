@@ -13,7 +13,7 @@
 - File handler (php artisan storage:link)
 
 # Set Up Frontend (React JS)
-- npm create vite@latest (Javascript)
+- npm create vite@latest NamaProjek -- --tempate react (React Javascript)
 - npm i axios react-router-dom react-bootstrap bootstrap
 - Clear (App.css & index.css)
 - main.jsx = import 'bootstrap/dist/css/bootstrap.min.css'
